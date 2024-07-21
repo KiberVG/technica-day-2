@@ -1,0 +1,52 @@
+div {
+    border-style: solid;
+    border-width: 3px;
+    margin: 10px;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* pixels, em, rem, percentages */
+/* 1 unit of rem = the default font size of the body */
+/* 1 unit of rem = 16 pixels */
+#first-div div {
+    width: 80%;
+}
+
+/* #first-div {
+    background-color: blue;
+} */
+
+/* .div-class {
+    background-color: red;
+} */
+
+/* #first-div p, #second-div p {
+    color: blue;
+} */
+
+/* #first-div > p {
+    color:blue;
+} */
+
+/* div.div-class#first-div {
+    background-color: red;
+} */
+
+#parent-box {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#parent-box > div {
+    width: 15rem;
+}
+
+#first-div > div > div {
+    background-color: red;
+}
