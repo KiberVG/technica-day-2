@@ -132,6 +132,34 @@ if (isAdult) {
   console.log('Not an adult');
 }
 
+// Creating a simple object
+let car = {
+  // Properties of the object (key-value pairs)
+  make: 'Toyota',      // 'make' is the key, 'Toyota' is the value
+  model: 'Camry',      // 'model' is the key, 'Camry' is the value
+  year: 2021,          // 'year' is the key, 2021 is the value
+  color: 'blue',       // 'color' is the key, 'blue' is the value
+  
+  // Method (function) inside the object
+  start: function() {
+      console.log('The car has started.');
+  },
+
+  // Another method
+  stop: function() {
+      console.log('The car has stopped.');
+  }
+};
+
+// Accessing properties of the object
+console.log('Car Make:', car.make);    // Output: Car Make: Toyota
+console.log('Car Model:', car.model);  // Output: Car Model: Camry
+console.log('Car Year:', car.year);    // Output: Car Year: 2021
+console.log('Car Color:', car.color);  // Output: Car Color: blue
+
+// Calling methods of the object
+car.start(); // Output: The car has started.
+car.stop();  // Output: The car has stopped.
 
 // Function basics //
 
@@ -142,6 +170,12 @@ function greet() {
   console.log('Hello, world!');
 }
 greet(); // Invoke the function
+
+// Function with arguments
+function greet(person) {
+  console.log(`Hello, ${person}!`)
+}
+greet("Kimber") // "Hello, Kimber!" will be logged
 
 // Function Expression
 const greetUser = function(name) {
@@ -158,6 +192,12 @@ function multiply(a, b) {
 let product2 = multiply(4, 5);
 console.log(product); // 20
 
+function addFish(name) {
+  return name + " fish"
+}
+let newName = addFish("Kimber")
+console.log(newName) // Kimber fish
+
 // What function scope is.
 // Scope determines the visibility of variables. 
 // Variables defined inside a function are not accessible outside of it (local scope).
@@ -172,7 +212,7 @@ scopeExample();
 // Arrays and Loops // 
 
 // Using arrays.
-let fruits = ['Apple', 'Banana', 'Cherry'];
+
 console.log(fruits[0]); // Apple
 
 // Using built-in array methods.
@@ -185,7 +225,7 @@ console.log(fruits); // ["Banana", "Cherry"]
 fruits.unshift('Apricot'); // Add an item to the beginning
 console.log(fruits); // ["Apricot", "Banana", "Cherry"]
 
-// Using loops.
+let fruits = ['Apple', 'Banana', 'Cherry'];
 
 // For loop
 for (let i = 0; i < fruits.length; i++) {
@@ -203,6 +243,7 @@ while (count < 3) {
   console.log(count);
   count++;
 }
+
 
 // Getting your hands dirty with TDD exercises.
 // Example: Write a function to reverse an array.
@@ -355,3 +396,21 @@ counterButton.addEventListener('click', function() {
   count++;
   counterDisplay.textContent = `Count: ${count}`;
 });
+
+let firstParagraph = document.querySelector('p')
+// Modifying Styles
+firstParagraph.style.color = 'blue'; // Changes the text color to blue
+firstParagraph.style.fontSize = '20px'; // Changes the font size to 20px
+
+// Creating and Appending New Elements
+let newParagraph = document.createElement('p'); // Creates a new <p> element
+newParagraph.innerText = 'This is a new paragraph added by JavaScript.';
+document.body.appendChild(newParagraph); // Appends the new paragraph to the body of the document
+
+// Removing an Element
+newParagraph.remove()
+removeButton.addEventListener('click', function() {
+    newParagraph.remove(); // Removes the new paragraph when the button is clicked
+});
+
+
